@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja Assignment</title>
+    <link rel="stylesheet"
+    8href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  </head>
+  <body>
+    <h1>What have we here...</h1>
+    {%if color == "ninja"%}
+      <img src="static/images/tmnt.png" alt="TMNT">
+    {%elif color == 'blue'%}
+      <img src="{{ url_for('static', filename='images/leonardo.jpg') }}" alt ="Leonardo">
+    {%elif color == 'purple'%}
+      <img src="{{ url_for('static', filename='images/donatello.jpg') }}" alt ="Donatello">
+    {%elif color == 'orange'%}
+      <img src="{{ url_for('static', filename='images/michelangelo.jpg') }}" alt ="Michelangelo">
+    {%elif color == 'red'%}
+      <img src="{{ url_for('static', filename='images/raphael.jpg') }}" alt ="Raphael">
+    {%else%}
+      <img src="{{ url_for('static', filename='images/notapril.jpg') }}" alt ="Not April">
+    {%endif%}
+  </body>
+</html>
